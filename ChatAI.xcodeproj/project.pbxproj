@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		95357A4E2F6DDB1B00D2CB15 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 95357A4D2F6DDB1B00D2CB15 /* FirebaseAuth */; };
+		95357A502F6DDB1B00D2CB15 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 95357A4F2F6DDB1B00D2CB15 /* FirebaseFirestore */; };
+		95357A522F6DDB1B00D2CB15 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 95357A512F6DDB1B00D2CB15 /* FirebaseMessaging */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		95357A3C2F6DD85700D2CB15 /* ChatAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +29,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95357A522F6DDB1B00D2CB15 /* FirebaseMessaging in Frameworks */,
+				95357A4E2F6DDB1B00D2CB15 /* FirebaseAuth in Frameworks */,
+				95357A502F6DDB1B00D2CB15 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +74,9 @@
 			);
 			name = ChatAI;
 			packageProductDependencies = (
+				95357A4D2F6DDB1B00D2CB15 /* FirebaseAuth */,
+				95357A4F2F6DDB1B00D2CB15 /* FirebaseFirestore */,
+				95357A512F6DDB1B00D2CB15 /* FirebaseMessaging */,
 			);
 			productName = ChatAI;
 			productReference = 95357A3C2F6DD85700D2CB15 /* ChatAI.app */;
@@ -94,6 +106,9 @@
 			);
 			mainGroup = 95357A332F6DD85700D2CB15;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				95357A4C2F6DDB1B00D2CB15 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 95357A3D2F6DD85700D2CB15 /* Products */;
 			projectDirPath = "";
@@ -251,6 +266,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ChatAI/ChatAI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BPB3BV66JV;
@@ -283,6 +299,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ChatAI/ChatAI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BPB3BV66JV;
@@ -332,6 +349,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		95357A4C2F6DDB1B00D2CB15 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		95357A4D2F6DDB1B00D2CB15 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95357A4C2F6DDB1B00D2CB15 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		95357A4F2F6DDB1B00D2CB15 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95357A4C2F6DDB1B00D2CB15 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		95357A512F6DDB1B00D2CB15 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95357A4C2F6DDB1B00D2CB15 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 95357A342F6DD85700D2CB15 /* Project object */;
 }

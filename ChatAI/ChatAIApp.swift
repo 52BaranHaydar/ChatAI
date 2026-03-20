@@ -6,9 +6,17 @@
 //
 
 import SwiftUI
+import FirebaseCore
 
 @main
 struct ChatAIApp: App {
+    
+    init() {
+        if FirebaseApp.app() == nil {
+            FirebaseApp.configure()
+        }
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
