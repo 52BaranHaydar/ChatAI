@@ -30,7 +30,7 @@ class ChatService : ObservableObject {
                     guard let id = data["id"] as? String,
                           let text = data["text"] as? String,
                           let senderID = data["senderID"] as? String,
-                          let senderName = data["senderNmae"] as? String,
+                          let senderName = data["senderName"] as? String,
                           let timestamp = data["timestamp"] as? Timestamp,
                           let sentimentString = data["sentiment"] as? String,
                           let sentiment = Message.Sentiment(rawValue: sentimentString) else {return nil}

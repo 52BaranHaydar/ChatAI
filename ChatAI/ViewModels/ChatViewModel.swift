@@ -31,18 +31,21 @@ class ChatViewModel: ObservableObject {
     
     // Mesaj gönder
     func sendMessage() async {
-        guard !messageText.trimmingCharacters(in: .whitespaces).isEmpty,
-              let user = authService.currentUser else { return }
+        guard !messageText.trimmingCharacters(in: .whitespaces).isEmpty else { return }
         
         let text = messageText
         await MainActor.run { messageText = "" }
         
         let sentiment = analyzeSentiment(text)
         
+        // Test için geçici kullanıcı
+        let userID = authService.currentUser?.id ?? "test-user"
+        let userName = authService.currentUser?.name ?? "Test Kullanıcı"
+        
         let message = Message(
             text: text,
-            senderID: user.id,
-            senderName: user.name,
+            senderID: userID,
+            senderName: userName,
             sentiment: sentiment
         )
         
